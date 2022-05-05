@@ -1,6 +1,3 @@
-// We use class syntax to define our extension object
-// This isn't actually necessary, but it tends to look the best
-
 class MyExtension {
   /**
    * Scratch will call this method *once* when the extension loads.
