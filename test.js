@@ -25,15 +25,18 @@ class StrictEqualityExtension {
           text: 'Hello, world!'
         },
         {
-          opcode: 'colorcolor',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Color Matrix [ONE] [TWO]',
+          opcode: 'wtf',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[ONE] strictly equals wtf [TWO]',
           arguments: {
             ONE: {
-              type: Scratch.ArgumentType.COLOR
-          },
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'First value'
+            },
             TWO: {
-              type: Scratch.ArgumentType.MATRIX
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'Second value'
+            }
           }
         }
       ]
@@ -46,8 +49,8 @@ class StrictEqualityExtension {
   hello() {
     return 'Hello, world!';
   }
-  colorcolor(args){
-    retrun args.ONE;
+  wtf(args) {
+    return args.ONE === args.TWO;
   }
 }
 Scratch.extensions.register(new StrictEqualityExtension());
