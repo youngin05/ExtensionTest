@@ -25,6 +25,11 @@ class StrictEqualityExtension {
           text: 'Hello, world!'
         },
         {
+          opcode: 'touch',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'touch'
+        },
+        {
           opcode: 'wtf',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[ONE] strictly equals wtf [TWO]',
@@ -46,6 +51,9 @@ class StrictEqualityExtension {
   }
   hello() {
     return 'Hello, world!';
+  }
+  touch() {
+    return event.touches.length;
   }
   wtf(args) {
     return args.ONE === args.TWO;
