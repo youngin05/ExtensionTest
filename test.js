@@ -30,12 +30,10 @@ class StrictEqualityExtension {
           text: '[ONE] strictly equals wtf [TWO]',
           arguments: {
             ONE: {
-              type: Scratch.ArgumentType.MATRIX,
-              defaultValue: 'First value'
+              type: Scratch.ArgumentType.MATRIX
             },
             TWO: {
-              type: Scratch.ArgumentType.COLOR,
-              defaultValue: 'Second value'
+              type: Scratch.ArgumentType.COLOR
             }
           }
         }
