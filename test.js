@@ -28,16 +28,17 @@ class MyExtension {
           text: 'Hello, world!'
         },
         {
-          opcode: 'isequal',
+          opcode: 'strictlyEquals',
           blockType: Scratch.BlockType.BOOLEAN,
-          text: '[ONE] == [TWO]',
+          text: '[ONE] strictly equals [TWO]',
           arguments: {
             ONE: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: '167'
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'First value'
             },
             TWO: {
-              type: Scratch.ArgumentType.COLOR
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'Second value'
             }
       ]
     };
@@ -52,8 +53,10 @@ class MyExtension {
     // The block will wait until the Promise resolves and return the resolved value.
     return 'Hello, world!';
   }
-  isequal({ ONE, TWO }) {
-    return ONE == TWO;
+    
+  strictlyEquals(args) {
+    // Note strict equality: Inputs must match exactly: in type, case, etc.
+    return args.ONE === args.TWO;
   }
 }
 
