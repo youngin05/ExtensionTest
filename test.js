@@ -20,25 +20,36 @@ class StrictEqualityExtension {
           }
         },
         {
-          // `opcode` is the internal ID of the block
-          // It should never change!
-          // It corresponds to the class method with the same name.
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Hello, world!'
+        },
+        {
+          opcode: 'colorcolor',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Color Matrix [ONE] [TWO]',
+          arguments: {
+            ONE: {
+              type: Scratch.ArgumentType.COLOR,
+              defaultValue: '0'
+          },
+            TWO: {
+              type: Scratch.ArgumentType.MATRIX,
+              defaultValue: '0'
+          }
         }
       ]
     };
+    
   }
   strictlyEquals(args) {
-    // Note strict equality: Inputs must match exactly: in type, case, etc.
     return args.ONE === args.TWO;
   }
   hello() {
-    // You can just return a value: any string, boolean, or number will work.
-    // If you have to perform an asynchronous action like a request, just return a Promise.
-    // The block will wait until the Promise resolves and return the resolved value.
     return 'Hello, world!';
+  }
+  colorcolor(args){
+    retrun 0;
   }
 }
 Scratch.extensions.register(new StrictEqualityExtension());
