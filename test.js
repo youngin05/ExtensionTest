@@ -26,7 +26,19 @@ class MyExtension {
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Hello, world!'
-        }
+        },
+        {
+          opcode: 'isequal',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: '[ONE] == [TWO]',
+          arguments: {
+            ONE: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: '167'
+            },
+            TWO: {
+              type: Scratch.ArgumentType.COLOR
+            }
       ]
     };
   }
@@ -39,6 +51,9 @@ class MyExtension {
     // If you have to perform an asynchronous action like a request, just return a Promise.
     // The block will wait until the Promise resolves and return the resolved value.
     return 'Hello, world!';
+  }
+  isequal({ ONE, TWO }) {
+    return ONE == TWO;
   }
 }
 
