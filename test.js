@@ -30,12 +30,10 @@ class StrictEqualityExtension {
           text: 'Color Matrix [ONE] [TWO]',
           arguments: {
             ONE: {
-              type: Scratch.ArgumentType.COLOR,
-              defaultValue: '0'
+              type: Scratch.ArgumentType.COLOR
           },
             TWO: {
-              type: Scratch.ArgumentType.MATRIX,
-              defaultValue: '0'
+              type: Scratch.ArgumentType.MATRIX
           }
         }
       ]
@@ -49,7 +47,7 @@ class StrictEqualityExtension {
     return 'Hello, world!';
   }
   colorcolor(args){
-    retrun 0;
+    retrun args.ONE;
   }
 }
 Scratch.extensions.register(new StrictEqualityExtension());
