@@ -32,9 +32,9 @@ class StrictEqualityExtension {
         {
           opcode: 'Upper',
           blockType: Scratch.BlockType.REPORTER,
-          text: '[ONE] Upper',
+          text: 'Upper [A]',
           arguments: {
-            ONE: {
+            A: {
               type: Scratch.ArgumentType.STRING
             }
           }
@@ -69,8 +69,8 @@ class StrictEqualityExtension {
     });
     return touch_yes;
   }
-  Upper(args) {
-    let Upper_test = args.toUpperCase();
+  Upper({A}) {
+    let Upper_test = A.toUpperCase();
     console.log(Upper_test);
     return Upper_test;
   
