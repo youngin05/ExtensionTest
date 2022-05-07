@@ -26,7 +26,7 @@ class StrictEqualityExtension {
         },
         {
           opcode: 'touch',
-          blockType: Scratch.BlockType.REPORTER,
+          blockType: Scratch.BlockType.BOOLEAN,
           text: 'touch'
         },
         {
@@ -53,7 +53,11 @@ class StrictEqualityExtension {
     return 'Hello, world!';
   }
   touch() {
-    return event.touches.length;
+    let touch_yes = false;
+    addEventListener('click', function(event){
+      touch_yes = true;
+    });
+    return touch_yes;
   }
   wtf(args) {
     return args.ONE === args.TWO;
