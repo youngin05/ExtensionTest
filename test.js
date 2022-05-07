@@ -64,8 +64,10 @@ class StrictEqualityExtension {
   }
   touch() {
     let touch_yes = false;
+    console.log('touch sensing ...');
     addEventListener('click', function(event){
       touch_yes = true;
+      console.log('touch sensed !!!');
     });
     return touch_yes;
   }
