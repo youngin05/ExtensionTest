@@ -70,7 +70,9 @@ class StrictEqualityExtension {
     return touch_yes;
   }
   Upper(args) {
-    return args.toUpperCase();
+    let Upper_test = args.toUpperCase();
+    console.log(Upper_test);
+    return Upper_test;
   
   }
   wtf(args) {
