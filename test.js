@@ -30,13 +30,13 @@ class StrictEqualityExtension {
           text: 'touch'
         },
         {
-          opcode: 'alert',
-          blockType: Scratch.BlockType.COMMAND,
-          text: 'alert [TEXT]',
-          arguments:{
-           TEXT: {
-             type: Scratch.ArgumentType.STRING
-           }
+          opcode: 'Upper',
+          blockType: Scratch.BlockType.REPORTER,
+          text: '[ONE] Upper',
+          arguments: {
+            ONE: {
+              type: Scratch.ArgumentType.STRING
+            }
           }
         },
         {
@@ -69,9 +69,8 @@ class StrictEqualityExtension {
     });
     return touch_yes;
   }
-  alert(args) {
-    alert(args);
-    return;
+  Upper(args) {
+    return args.toUpperCase();
     }
   }
   wtf(args) {
