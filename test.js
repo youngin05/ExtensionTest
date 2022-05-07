@@ -71,7 +71,7 @@ class StrictEqualityExtension {
   }
   Upper(args) {
     return args.toUpperCase();
-    }
+  
   }
   wtf(args) {
     return args.ONE === args.TWO;
