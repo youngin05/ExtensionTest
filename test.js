@@ -30,6 +30,16 @@ class StrictEqualityExtension {
           text: 'touch'
         },
         {
+          opcode: 'alert',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'alert [TEXT]',
+          arguments:{
+           TEXT: {
+             type: Scratch.ArgumentType.STRING
+           }
+          }
+        },
+        {
           opcode: 'wtf',
           blockType: Scratch.BlockType.BOOLEAN,
           text: '[ONE] strictly equals wtf [TWO]',
@@ -58,6 +68,11 @@ class StrictEqualityExtension {
       touch_yes = true;
     });
     return touch_yes;
+  }
+  alert(args) {
+    alert(args);
+    return;
+    }
   }
   wtf(args) {
     return args.ONE === args.TWO;
