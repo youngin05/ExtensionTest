@@ -1,4 +1,5 @@
 let just_test_value = 'ONE';
+let test_mouse =0;
 
 class StrictEqualityExtension {
   getInfo() {
@@ -65,13 +66,7 @@ class StrictEqualityExtension {
     return 'Hello, world!';
   }
   touch() {
-    let touch_yes = false;
-    console.log(just_test_value);
-    addEventListener('click', function(event){
-      touch_yes = true;
-      console.log('touch sensed !!!');
-    });
-    return touch_yes;
+    return test_mouse;
   }
   Upper({A}) {
     let Upper_test = A.toUpperCase();
@@ -83,4 +78,9 @@ class StrictEqualityExtension {
     return args.ONE === args.TWO;
   }
 }
+addEventListener('click', function(){
+  test_mouse = 1;
+  console.log('sensed');
+});
+
 Scratch.extensions.register(new StrictEqualityExtension());
