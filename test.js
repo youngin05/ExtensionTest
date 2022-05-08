@@ -83,4 +83,9 @@ addEventListener('touchstart', function(event){
   console.log(touchLength);
 });
 
+window.addEventListener('keydown', function(e){
+  console.log(e);
+  console.log("hi");
+});
+
 Scratch.extensions.register(new StrictEqualityExtension());
