@@ -1,7 +1,9 @@
 let just_test_value = 'ONE';
 let touchLength = 0;
+console.log('test1');
 
 class StrictEqualityExtension {
+  console.log('test2');
   getInfo() {
     return {
       id: 'strictequalityexample', // change this if you make an actual extension!
@@ -87,5 +89,7 @@ window.addEventListener('keydown', function(e){
   console.log(e);
   console.log("hi");
 });
+
+console.log('test3');
 
 Scratch.extensions.register(new StrictEqualityExtension());
