@@ -67,11 +67,11 @@ class StrictEqualityExtension {
     return 'Hello, world!';
   }
   touch() {
-    addEventListener('touchstart', function(event){
-  touchLength = event.touches.length;
-  console.log(touchLength);
-});
-    console.log('test');
+  window.addEventListener('touchstart', function(event){
+    touchLength = event.touches.length;
+    console.log(touchLength);
+  });
+    console.log('test123');
     return touchLength;
   }
   Upper({A}) {
