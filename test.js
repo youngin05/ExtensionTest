@@ -30,7 +30,7 @@ class StrictEqualityExtension {
         },
         {
           opcode: 'touch',
-          blockType: Scratch.BlockType.BOOLEAN,
+          blockType: Scratch.BlockType.REPORTER,
           text: 'touch'
         },
         {
@@ -67,6 +67,11 @@ class StrictEqualityExtension {
     return 'Hello, world!';
   }
   touch() {
+    addEventListener('touchstart', function(event){
+  touchLength = event.touches.length;
+  console.log(touchLength);
+});
+    console.log('test');
     return touchLength;
   }
   Upper({A}) {
