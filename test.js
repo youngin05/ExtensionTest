@@ -95,6 +95,6 @@ window.addEventListener('keydown', function(e){
 });
 
 console.log('test3');
-console.log(getElementsByClassName('StrictEqualityExtension'));
+console.log(element.getElementsByClassName('StrictEqualityExtension'));
 
 Scratch.extensions.register(new StrictEqualityExtension());
